@@ -21,6 +21,9 @@ for i=1:size(cat_fea_col,2)
 end
 y=input(:,y_col);
 
+%the first column is num , so drop it
+x(:,1)=[];
+
 %splitting data into training set and testing set
 num_train=int32(size(x,1)/2);
 num_test=size(x,1)-num_train;
