@@ -4,7 +4,7 @@ close all;
 
 load data.mat
 
-f=fitForest(xtrain,ytrain);
+f=fitForest(xtrain,ytrain,'ntrees',10,'randomFeatures',50,'bagSize',2/3);
 
 yhattrain=predictForest(f,xtrain);
 yhattest=predictForest(f,xtest);

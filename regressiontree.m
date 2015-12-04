@@ -4,10 +4,10 @@ close all;
 
 load data.mat
 
-t=RegressionTree.fit(xtrain,ytrain);
+t=dtfit(xtrain,ytrain,'forceRegression',true);
 
-yhattrain=predict(t,xtrain);
-yhattest=predict(t,xtest);
+yhattrain=dtpredict(t,xtrain);
+yhattest=dtpredict(t,xtest);
 
 msetrain=sum((yhattrain-ytrain).^2)./size(ytrain,1);
 msetest=sum((yhattest-ytest).^2)./size(ytest,1);
