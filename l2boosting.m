@@ -23,6 +23,8 @@ msetest(1)=sum((yhattest(:,1)-ytest).^2)./size(ytest,1);
 
 for m=1:M
     
+    m
+    
     residue=ytrain-yhattrain(:,m);
     
     t=dtfit(xtrain,residue,'forceRegression',true,'maxdepth',2);
