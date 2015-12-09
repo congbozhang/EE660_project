@@ -2,10 +2,13 @@ clear;
 clc;
 close all;
 
-load data.mat
+load data_reduced.mat
 
-M=2;
+M=487;
 v=0.1;
+
+xtrain=[xtrain;xval];
+ytrain=[ytrain;yval];
 
 msetrain=zeros(1,M+1);
 msetest=msetrain;
